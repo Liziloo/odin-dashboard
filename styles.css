@@ -7,7 +7,7 @@ body {
     margin: 0 100px;
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: 1fr 6fr;
+    grid-template-rows: 1fr 5fr;
     grid-template-areas: 
         "sidebar header"
         "sidebar main";
@@ -16,14 +16,49 @@ body {
 #header {
     background-color: white;
     grid-area: header;
+    display: grid;
+    grid-template-rows: 2fr 3fr;
+}
+
+#search-row {
+    background-color: red;
+
+}
+
+#welcome-row {
+    background-color: brown;
 }
 
 #sidebar {
     background-color: blue;
     grid-area: sidebar;
+    display: grid;
+    grid-template-rows: 1fr 5fr 8fr;
+}
+
+#logo-banner {
+    background-color: antiquewhite;
+}
+
+#main-menu {
+    background-color: blueviolet;
+}
+
+#settings-menu {
+    background-color: pink;
 }
 
 #main {
     background-color: lightblue;
     grid-area: main;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+#main div:first-child {
+    background-color: burlywood;
+}
+
+#main div:last-child {
+    background-color: cadetblue;
 }
