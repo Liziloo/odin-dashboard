@@ -50,15 +50,58 @@ body {
 
 #main {
     background-color: lightblue;
+    padding: 15px;
     grid-area: main;
     display: grid;
     grid-template-columns: 3fr 1fr;
 }
 
-#main div:first-child {
+#main > div:first-child {
     background-color: burlywood;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 3fr 3fr 3fr;
+    grid-template-areas: 
+        "main-header main-header"
+        "card1 card2"
+        "card3 card4"
+        "card5 card6";
+    gap: 5px;
 }
 
-#main div:last-child {
+.card {
+    background-color: blanchedalmond;
+}
+
+h2 {
+    grid-area: main-header;
+    align-self: end;
+}
+
+#card1 {
+    grid-area: card1;
+}
+
+#card2 {
+    grid-area: card2;
+}
+
+#card3 {
+    grid-area: card3;
+}
+
+#card4 {
+    grid-area: card4;
+}
+
+#card5 {
+    grid-area: card5;
+}
+
+#card6 {
+    grid-area: card6;
+}
+
+#main > div:last-child {
     background-color: cadetblue;
 }
