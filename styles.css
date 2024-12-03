@@ -107,19 +107,26 @@ input[type="search"]:focus {
 }
 
 #logo-banner {
-    background-color: antiquewhite;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    align-items: center;
+    color: #ffffff;
+}
+
+#main-menu, #settings-menu {
+    padding: 5px 10px;
 }
 
 #main-menu {
-    background-color: blueviolet;
+    color: white;
 }
 
 #settings-menu {
-    background-color: pink;
+    color: white;
 }
 
 #main {
-    background-color: lightblue;
+    background-color: #d6d4e0;
     padding: 15px;
     grid-area: main;
     display: grid;
@@ -128,7 +135,6 @@ input[type="search"]:focus {
 }
 
 #main > div:first-child {
-    background-color: burlywood;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 3fr 3fr 3fr;
@@ -141,7 +147,7 @@ input[type="search"]:focus {
 }
 
 .card {
-    background-color: blanchedalmond;
+    background-color: white;
 }
 
 h2 {
@@ -174,7 +180,6 @@ h2 {
 }
 
 #main > div:last-child {
-    background-color: cadetblue;
     display: grid;
     grid-template-rows: 50px 3fr 50px 3fr;
     gap: 5px;
@@ -185,9 +190,9 @@ h2 {
 }
 
 #announcements {
-    background-color: fuchsia;
+    background-color: white;
 }
 
 #trending {
-    background-color: fuchsia;
+    background-color: white;
 }
