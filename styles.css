@@ -1,10 +1,30 @@
-body {
-    background-color: black;
+button {
+    background-color: #e06377;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 5px 20px;
+    width: 80px;
+}
+
+.icon {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.avatar {
+    height: 3.75rem;
+    border-radius: 50px;
+}
+
+.icon.avatar {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50px;
 }
 
 #container {
     height: 100vh;
-    margin: 0 100px;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
@@ -14,23 +34,73 @@ body {
 }
 
 #header {
+    position: relative;
     background-color: white;
+    padding: 20px 40px;
     grid-area: header;
     display: grid;
     grid-template-rows: 2fr 3fr;
+    align-items: center;
+    box-shadow: darkgray 0 5px 5px;
 }
 
 #search-row {
-    background-color: red;
+    display: grid;
+    grid-template-columns: 7fr 3fr;
+    gap: 80px;
+}
 
+#search-row > * {
+    align-items: center;
+}
+
+#search > * {
+    display: inline;
+}
+
+#user-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+}
+
+input[type="search"] {
+    border-radius: 50px;
+    border: none;
+    background-color: #d6d4e0;
+    width: calc(100% - 2.5rem);
+}
+
+input[type="search"]:focus {
+    border-color: #b8a9c9;
 }
 
 #welcome-row {
-    background-color: brown;
+    display: grid;
+    grid-template-columns: 1fr 3fr 2fr 3fr;
+    align-items: center;
+    align-self: end;
+    grid-template-areas: 
+        "avatar greeting . buttons";
+}
+
+#welcome-row .avatar {
+    grid-area: avatar;
+    justify-self: center;
+}
+
+#greeting {
+    grid-area: greeting;
+}
+
+#buttons {
+    grid-area: buttons;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
 }
 
 #sidebar {
-    background-color: blue;
+    background-color: #622569;
     grid-area: sidebar;
     display: grid;
     grid-template-rows: 1fr 5fr 8fr;
