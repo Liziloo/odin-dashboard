@@ -1,3 +1,7 @@
+body {
+    height: 100vh;
+}
+
 button {
     background-color: #e06377;
     color: white;
@@ -24,7 +28,7 @@ button {
 }
 
 #container {
-    height: 100vh;
+    height: 100%;
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 5fr;
@@ -136,19 +140,30 @@ input[type="search"]:focus {
     grid-area: main;
     display: grid;
     grid-template-columns: 3fr 1fr;
+    grid-template-rows: 40px 1fr;
     gap: 15px;
+    grid-template-areas: 
+        "col-headers col-headers"
+        "col1 col2";
+}
+
+#headers {
+    grid-area: col-headers;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
 }
 
 #main-column-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 50px 3fr 3fr 3fr;
+    grid-template-rows: 3fr 3fr 3fr;
     grid-template-areas: 
         "main-header main-header"
         "card1 card2"
         "card3 card4"
         "card5 card6";
     gap: 15px;
+    grid-area: col1;
 }
 
 .card-edge-box {
@@ -182,49 +197,46 @@ h3 {
     padding: 15px 0;
 }
 
-h2 {
+header h2 {
     grid-area: main-header;
     align-self: end;
 }
 
-#card1 {
-    grid-area: card1;
-}
-
-#card2 {
-    grid-area: card2;
-}
-
-#card3 {
-    grid-area: card3;
-}
-
-#card4 {
-    grid-area: card4;
-}
-
-#card5 {
-    grid-area: card5;
-}
-
-#card6 {
-    grid-area: card6;
-}
-
 #main-column-2 {
-    display: grid;
-    grid-template-rows: 50px 3fr 50px 3fr;
-    gap: 5px;
+    grid-area: col2;
+    height: 100%;
 }
 
-#main > div:last-child > div:nth-child(odd) {
-    align-self: end;
+#main-column-2 h2 {
+    margin: 20px 0 5px 0;
 }
 
 #announcements {
     background-color: white;
+    padding: 20px 30px;
+    border-radius: 10px;
+}
+
+.announcement-card {
+    border-bottom: 1px solid lightgray;
+    padding: 15px 0;
+}
+
+.announcement-card:last-child {
+    border-bottom: none;
 }
 
 #trending {
     background-color: white;
+    border-radius: 10px;
+    padding: 20px 20px;
+}
+
+#trending ul > * {
+    margin-bottom: 20px;
+}
+
+#trending li > * {
+    display: inline-block;
+    margin-right: 10px;
 }
