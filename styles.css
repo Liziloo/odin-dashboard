@@ -134,7 +134,7 @@ input[type="search"]:focus {
     gap: 15px;
 }
 
-#main > div:first-child {
+#main-column-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 50px 3fr 3fr 3fr;
@@ -146,8 +146,16 @@ input[type="search"]:focus {
     gap: 5px;
 }
 
+.card-edge-box {
+    background-color: #5b9aa0;
+    border-radius: 10px;
+}
+
 .card {
     background-color: white;
+    border-radius: 0 10px 10px 0;
+    height: 100%;
+    margin-left: 10px;
 }
 
 h2 {
@@ -179,7 +187,7 @@ h2 {
     grid-area: card6;
 }
 
-#main > div:last-child {
+#main-column-2 {
     display: grid;
     grid-template-rows: 50px 3fr 50px 3fr;
     gap: 5px;
