@@ -113,6 +113,11 @@ input[type="search"]:focus {
     color: #ffffff;
 }
 
+#sidebar li {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
 #main-menu, #settings-menu {
     padding: 5px 10px;
 }
