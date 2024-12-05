@@ -266,6 +266,7 @@ input[type="search"]:focus {
 .card-edge-box {
     background-color: #5b9aa0;
     border-radius: 10px;
+    box-shadow: darkgray 5px 5px 5px;
 }
 
 .card {
