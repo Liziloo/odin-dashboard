@@ -102,7 +102,7 @@ button {
     border: none;
     border-radius: 50px;
     padding: 5px 20px;
-    width: 80px;
+    width: 90px;
 }
 
 .icon {
@@ -116,9 +116,10 @@ button {
 }
 
 .icon.avatar {
-    height: 2rem;
-    width: 2rem;
+    height: 2.5rem;
+    width: 2.5rem;
     border-radius: 50px;
+    background-color: #eeac99;
 }
 
 #container {
@@ -162,6 +163,7 @@ button {
 }
 
 input[type="search"] {
+    padding: 1px 12px;
     border-radius: 50px;
     border: none;
     background-color: #d6d4e0;
@@ -200,6 +202,8 @@ input[type="search"]:focus {
 #sidebar {
     background-color: #622569;
     font-family: "boldbold";
+    padding-left: 10px;
+    padding-top: 10px;
     grid-area: sidebar;
     display: grid;
     grid-template-rows: 1fr 5fr 8fr;
@@ -217,7 +221,7 @@ input[type="search"]:focus {
     font-size: 1.25rem;
     display: grid;
     grid-template-columns: 1fr 5fr;
-    line-height: 2;
+    line-height: 2.5;
     align-items: center;
 }
 
@@ -235,12 +239,12 @@ input[type="search"]:focus {
 
 #main {
     background-color: #d6d4e0;
-    padding: 15px;
+    padding: 20px;
     grid-area: main;
     display: grid;
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 40px 1fr;
-    gap: 15px;
+    gap: 5px 15px;
     grid-template-areas: 
         "col-headers col-headers"
         "col1 col2";
@@ -279,7 +283,7 @@ input[type="search"]:focus {
     padding: 20px 15px;
     display: grid;
     grid-template-columns: 3fr 2fr;
-    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 4fr 2fr;
 }
 
 h3 {
@@ -288,6 +292,10 @@ h3 {
 
 .card p {
     grid-column: 1 / span 2;
+}
+
+.card p, #trending p, .announcement-card p {
+    color: gray;
 }
 
 .card-buttons {
@@ -341,4 +349,8 @@ header h2 {
 #trending li > * {
     display: inline-block;
     margin-right: 10px;
+}
+
+#trending, .announcement-card {
+    font-size: .8rem;
 }
