@@ -313,6 +313,7 @@ header h2 {
     background-color: white;
     padding: 20px 30px;
     border-radius: 10px;
+    box-shadow: darkgray 5px 5px 5px;
 }
 
 .announcement-card {
@@ -328,6 +329,7 @@ header h2 {
     background-color: white;
     border-radius: 10px;
     padding: 20px 20px;
+    box-shadow: darkgray 5px 5px 5px;
 }
 
 #trending ul > * {
