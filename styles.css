@@ -217,6 +217,8 @@ input[type="search"]:focus {
     font-size: 1.25rem;
     display: grid;
     grid-template-columns: 1fr 5fr;
+    line-height: 2;
+    align-items: center;
 }
 
 #main-menu, #settings-menu {
